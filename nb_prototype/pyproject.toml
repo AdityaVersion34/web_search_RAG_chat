@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "nb_prototype"
+version = "0.1.0"
+description = "Notebook prototype of my web search RAG chatbot"
+authors = ["aditya venkatesh <aditya34@illinois.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.13.5"
+jupyterlab = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
