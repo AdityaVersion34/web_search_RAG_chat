@@ -8,6 +8,13 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "3.13.5"
 jupyterlab = "*"
+langchain = "*"
+numpy = "^2.1.0"
+langchain-core = "*"
+python-dotenv = "*"
+langchain-community = "*"
+langchain-chroma = "*"
+langchain-openai = "*"
 
 [build-system]
 requires = ["poetry-core"]
