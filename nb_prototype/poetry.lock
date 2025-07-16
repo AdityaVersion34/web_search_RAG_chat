@@ -437,6 +437,21 @@ webencodings = "*"
 css = ["tinycss2 (>=1.1.0,<1.5)"]
 
 [[package]]
+name = "bs4"
+version = "0.0.2"
+description = "Dummy package for Beautiful Soup (beautifulsoup4)"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "bs4-0.0.2-py2.py3-none-any.whl", hash = "sha256:abf8742c0805ef7f662dce4b51cca104cffe52b835238afc169142ab9b3fbccc"},
+    {file = "bs4-0.0.2.tar.gz", hash = "sha256:a48685c58f50fe127722417bae83fe6badf500d54b55f7e39ffe43b798653925"},
+]
+
+[package.dependencies]
+beautifulsoup4 = "*"
+
+[[package]]
 name = "build"
 version = "1.2.2.post1"
 description = "A simple, correct Python build frontend"
@@ -5564,4 +5579,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.13.5"
-content-hash = "d9dbc8d3b5b6826bfc91b1b8f21d2c35288b657ae300672c158232b9d71bf3a2"
+content-hash = "1b325789045e48603f44fe379be436e3878347373a7fbcfc3c4ac025a51a77de"
