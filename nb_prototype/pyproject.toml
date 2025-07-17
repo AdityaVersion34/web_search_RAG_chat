@@ -17,6 +17,7 @@ langchain-chroma = "*"
 langchain-openai = "*"
 requests = "*"
 bs4 = "*"
+html2text = "*"
 
 [build-system]
 requires = ["poetry-core"]
