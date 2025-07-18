@@ -3,9 +3,10 @@
 Currently finds the first relevant source and just uses that as additional context
 
 Improvements todo:
-- add citations [DONE]
-- loop web search until results are found [DONE]
-- add more search results
-- improve system prompt
-- (lower priority) improve search response time
+- use search APIs rather than google html scraping
+- improve search response time
+- add conversation memory
+- (lower priority) improve system prompt
+- (lower priority) use site-specific APIs for popular sites like reddit - requests doesn't read
+    comments seemingly
 - (lower priority) better system pipeline, i.e. multiple search queries, context sufficiency priority scores, etc.
