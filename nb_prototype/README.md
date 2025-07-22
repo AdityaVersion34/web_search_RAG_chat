@@ -3,8 +3,8 @@
 Currently finds the first relevant source and just uses that as additional context
 
 Improvements todo:
-- use search APIs rather than google html scraping
-- improve search response time
+- use search APIs rather than google html scraping [DONE]
+- improve search response time [DONE]
 - add conversation memory
 - (lower priority) improve system prompt
 - (lower priority) use site-specific APIs for popular sites like reddit - requests doesn't read

@@ -18,6 +18,8 @@ langchain-openai = "*"
 requests = "*"
 bs4 = "*"
 html2text = "*"
+selenium = "*"
+websearchapi = "^1.0.1"
 
 [build-system]
 requires = ["poetry-core"]
