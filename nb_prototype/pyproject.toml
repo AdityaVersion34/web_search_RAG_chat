@@ -20,6 +20,9 @@ bs4 = "*"
 html2text = "*"
 selenium = "*"
 websearchapi = "^1.0.1"
+typing = "*"
+typing_extensions = "*"
+langgraph = "*"
 
 [build-system]
 requires = ["poetry-core"]
