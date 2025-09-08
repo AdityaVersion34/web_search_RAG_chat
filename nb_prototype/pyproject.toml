@@ -23,6 +23,7 @@ websearchapi = "^1.0.1"
 typing = "*"
 typing_extensions = "*"
 langgraph = "*"
+streamlit = "*"
 
 [build-system]
 requires = ["poetry-core"]
