@@ -6,7 +6,7 @@ authors = ["aditya venkatesh <aditya34@illinois.edu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.13.5"
+python = "~3.13"
 jupyterlab = "*"
 langchain = "*"
 numpy = "^2.1.0"
