@@ -3,7 +3,12 @@ from app_langgraph import stream_graph_updates  # Adjust filename as needed
 import io
 import contextlib
 
-st.title("Chatbot")
+st.title("Web-Search RAG Chatbot")
+st.write("""This app is an LLM chatbot that uses RAG along with web search 
+         results to provide up-to-date and relevant information. 
+         This is similar to modern chatbot applications like Perplexity.
+         \nBuilt primarily with LangGraph and Streamlit.\nRead more about this project at \n\n
+         Built by Aditya Venkatesh""")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
