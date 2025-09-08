@@ -1,3 +1,4 @@
+import streamlit as st
 import os
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
@@ -22,9 +23,13 @@ from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.checkpoint.memory import InMemorySaver
 
 # Setup API keys and tools
-openai_api_key = os.environ["OPENAI_API_KEY"]
-cse_key = os.environ["GOOGLE_CSE_KEY"]
-cse_id = os.environ["GOOGLE_CSE_ID"]
+# openai_api_key = os.environ["OPENAI_API_KEY"]
+# cse_key = os.environ["GOOGLE_CSE_KEY"]
+# cse_id = os.environ["GOOGLE_CSE_ID"]
+
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+cse_key = st.secrets["GOOGLE_CSE_KEY"]
+cse_id = st.secrets["GOOGLE_CSE_ID"]
 
 def web_search_and_ingest(query):
     cse_url = 'https://www.googleapis.com/customsearch/v1'
@@ -37,7 +42,7 @@ def web_search_and_ingest(query):
             results.append(result['link'])
             if len(results) >= 5:
                 break
-    print("Search results:", results)
+    # print("Search results:", results)
     return "\n".join(results)
 
 web_search_tool = Tool(
@@ -47,7 +52,7 @@ web_search_tool = Tool(
 )
 
 tools = [web_search_tool]
-print(web_search_tool.invoke("What is runescape?"))
+# print(web_search_tool.invoke("What is runescape?"))
 
 # Setup Chatbot Logic
 class State(TypedDict):
@@ -79,7 +84,7 @@ graph = graph_builder.compile(checkpointer=memory)
 def stream_graph_updates(user_input):
     for event in graph.stream({"messages": [{"role": "user", "content": user_input}]}, config={"thread_id": 1}):
         for value in event.values():
-            print("Assistant:", value["messages"][-1].content)
+            print("", value["messages"][-1].content)    # previously prepended "Assistant: "
 
 def main():
     print("Chatbot is running. Type 'quit' or 'exit' to end.")
