@@ -8,7 +8,7 @@ st.write("""This app is an LLM chatbot that uses RAG along with web search
          results to provide up-to-date and relevant information. 
          This is similar to modern chatbot applications like Perplexity.
          \nBuilt primarily with LangGraph and Streamlit.
-         \nRead more about this project at https://adityavenkatesh.com
+         \nRead more about this project at https://adityavenkatesh.com/web-search-rag-chatbot
          \nBuilt by Aditya Venkatesh""")
 
 if "messages" not in st.session_state:
